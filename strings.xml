@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">av</string>
+    <string-array name="city">
+        <item>LON</item>
+        <item>ТEО</item>
+        <item>NYC</item>
+        <item>DXB</item>
+        <item>LAX</item>
+        <item>SYD</item>
+        <item>BJS</item>
+        <item>SAO</item>
+
+
+    </string-array>
+
+    <string name="date_edit_text_hint">Дата</string>
+    <string name="date_edit_text_hint1">Обратно</string>
+    <string name="btn_date_text">Когда</string>
+    <string name="btn_date_text1">Обратно</string>
+</resources>

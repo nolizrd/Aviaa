@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    android:background="#1883D8">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-1dp"
+
+        android:text="Поиск дешёвых авиабилетов"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <Spinner
+        android:id="@+id/spinnera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="145dp"
+        android:background="#FFFFFF"
+        android:entries="@array/city"
+        android:gravity="center"
+        android:text="Откуда"
+
+    />
+
+    <Spinner
+        android:id="@+id/spinnerb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnera"
+        android:background="#FFFFFF"
+        android:entries="@array/city"
+        android:gravity="center"
+        android:layout_alignLeft="@id/spinnera"
+        android:layout_alignRight="@id/spinnera"
+        android:text="Куда"
+
+        />
+
+    <TextView
+        android:id="@+id/picked_date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerb"
+        android:layout_alignLeft="@id/spinnera"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="0dp"
+        android:layout_toLeftOf="@+id/btn_date"
+        android:hint="@string/date_edit_text_hint"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/btn_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerb"
+        android:text="@string/btn_date_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/picked_date1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/picked_date"
+        android:layout_alignLeft="@id/spinnera"
+        android:layout_alignTop="@id/btn_date1"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="0dp"
+        android:layout_toLeftOf="@+id/btn_date"
+        android:hint="@string/date_edit_text_hint"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/btn_date1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_date"
+        android:text="@string/btn_date_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FF5722"
+        android:layout_below="@id/Jun"
+        android:text="Найти билеты" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@id/spinnera"
+        android:id="@+id/adult"
+        android:text="Взрослые"
+        android:layout_below="@id/picked_date1"
+        android:layout_marginTop="14dp"
+        />
+
+    <EditText
+        android:id="@+id/numA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_date1"
+        android:layout_alignLeft="@id/btn_date1"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/white"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@id/spinnera"
+        android:id="@+id/Kids"
+        android:text="Дети"
+        android:layout_below="@id/adult"
+        android:layout_marginTop="14dp"
+        />
+
+    <EditText
+        android:id="@+id/numB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numA"
+        android:layout_alignLeft="@id/btn_date1"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@id/Kids"
+        android:id="@+id/Jun"
+        android:text="Младенцы"
+        android:layout_below="@id/Kids"
+        android:layout_marginTop="14dp"
+        />
+
+    <EditText
+        android:id="@+id/numC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numB"
+        android:layout_alignLeft="@id/btn_date1"
+        android:layout_marginLeft="-4dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:inputType="number" />
+
+
+</RelativeLayout>
